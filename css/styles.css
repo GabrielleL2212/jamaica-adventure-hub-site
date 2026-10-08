@@ -1,0 +1,203 @@
+/* ========================================================
+   CUSTOM STUDENT LAYOUT RULES (NO INTERNET REQUIRED)
+   ======================================================== */
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+.navbar-custom {
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand-custom {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid #FED100; /* Jamaica Gold Line */
+}
+.nav-links-custom {
+    display: flex;
+    gap: 20px;
+}
+.nav-links-custom a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.nav-links-custom a.active, .nav-links-custom a:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Container Structure */
+.main-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.text-center { text-center: center; text-align: center; }
+
+/* Filter Buttons Layout */
+.button-group {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.btn-custom {
+    background-color: #fff;
+    color: #009B3A; /* Jamaica Green */
+    border: 2px solid #009B3A;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-custom.active, .btn-custom:hover {
+    background-color: #009B3A;
+    color: #fff;
+}
+
+/* Responsive Excursion Grid Layout */
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1100px));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Card Box Presentation Rules */
+.card-custom {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e1e4e8;
+    transition: transform 0.2s;
+}
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+.card-image-placeholder {
+    height: 180px;
+    background-color: #009B3A; /* Solid green theme backup if images don't load */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.card-content-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.card-title-text {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+.card-description-text {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.badge-custom {
+    background-color: #1a1a1a;
+    color: #FED100; /* Gold text */
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+/* Booking Form Elements */
+.form-card {
+    background: #fff;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 1px solid #e1e4e8;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.submit-btn {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #FED100;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.submit-btn:hover { background-color: #333; }
+
+/* Interactive Success Alert */
+.alert-box {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 6px solid #28a745;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.hidden { display: none !important; }
+
+/* Home Hero Box */
+.hero-box {
+    background: linear-gradient(135deg, #009B3A, #FED100);
+    color: #1a1a1a;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+/* Footer rules */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
