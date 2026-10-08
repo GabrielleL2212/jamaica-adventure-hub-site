@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamaica Adventure Hub | Book a Tour</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.html">Explore Adventures</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">Book a Tour</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FORM INTERACTION CONTAINER -->
+    <main class="container my-5" style="max-width: 600px;">
+        <header class="text-center mb-5">
+            <h1 class="display-5 fw-bold">Secure Your Excursion</h1>
+            <p class="text-muted">Fill out the registration details below to reserve your spot.</p>
+        </header>
+
+        <!-- ⚡ CLIENT-SIDE VALIDATION FORM -->
+        <div class="card shadow-sm p-4">
+            <form id="booking-form" novalidate>
+                <!-- Full Name Input -->
+                <div class="mb-3">
+                    <label for="fullName" class="form-label fw-semibold">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" required>
+                    <div class="invalid-feedback">Please enter your first and last name.</div>
+                </div>
+
+                <!-- Email Address Input -->
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+
+                <!-- Adventure Dropdown Choice -->
+                <div class="mb-3">
+                    <label for="adventureSelect" class="form-label fw-semibold">Select Your Adventure</label>
+                    <select class="form-select" id="adventureSelect" required>
+                        <option value="">-- Choose an Option --</option>
+                        <option value="danns-river">Dunn's River Falls Tour</option>
+                        <option value="blue-mountain">Blue Mountain Peak Hike</option>
+                        <option value="seven-mile">Seven Mile Beach Relaxation</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose an adventure destination.</div>
+                </div>
+
+                <!-- Terms & Conditions Checkbox -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                    <label class="form-check-label" for="termsCheck">I agree to the tour terms and cancellation policies.</label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+
+                <!-- Submit Action Button -->
+                <button type="submit" class="btn btn-primary w-120 entry-btn w-100 py-2 fw-bold mt-2">Complete Reservation</button>
+            </form>
+            
+            <!-- Success Message Container -->
+            <div id="success-alert" class="alert alert-success mt-4 d-none" role="alert">
+                🎉 Your reservation request was submitted successfully!
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script Assets -->
+    <script src="https://jquery.com"></script>
+    <script src="https://jsdelivr.net"></script>
+    <!-- Core JS Logic File -->
+    <script src="js/app.js"></script>
+</body>
+</html>
