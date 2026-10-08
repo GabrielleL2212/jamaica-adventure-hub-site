@@ -4,22 +4,22 @@
 var adventures = [
     {
         title: "Dunn's River Falls Tour",
-        category: "water",
+        category: "Water",
         description: "Climb the world-famous 600-foot cascading limestone terraces near Ocho Rios."
     },
     {
         title: "Blue Mountain Peak Hike",
-        category: "mountain",
+        category: "Mountain",
         description: "Trek up Jamaica's highest summit to view a breathtaking Caribbean sunrise."
     },
     {
         title: "Seven Mile Beach Relaxation",
-        category: "beach",
+        category: "Beach",
         description: "Bask along miles of pure, unbroken white sand and pristine turquoise waves."
     },
     {
         title: "Martha Brae River Rafting",
-        category: "water",
+        category: "Water",
         description: "Glide peacefully on a 30-foot handmade bamboo raft steered by a local guide."
     }
 ];
