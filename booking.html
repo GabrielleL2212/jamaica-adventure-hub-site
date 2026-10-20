@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamaica Adventure Hub | Book a Tour</title>
-    <!-- Linking directly to your custom layout rules sheet -->
+    <!-- Custom layout stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- CUSTOM THEMED NAVIGATION BAR -->
+    <!-- MAIN NAVBAR NAVIGATION -->
     <nav class="navbar">
         <a class="navbar-brand" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
         <div class="nav-links">
@@ -19,14 +19,14 @@
         </div>
     </nav>
 
-    <!-- FORM INTERACTION CONTAINER -->
+    <!-- MAIN FORM BANNER CONTENT -->
     <main class="container text-center">
         <header style="margin-bottom: 40px;">
             <h1 style="font-size: 36px; margin-bottom: 10px; font-weight: bold;">Secure Your Excursion</h1>
             <p class="text-muted">Fill out the registration details below to reserve your spot.</p>
         </header>
 
-        <!-- FIXED FORM WRAPPER (ADDED THE FORM-CARD CLASS FOR CENTERED ALIGNMENT) -->
+        <!-- REGISTRATION ENTRY SECTIONS -->
         <div class="form-card">
             <form id="booking-form">
                 
@@ -47,7 +47,6 @@
                         <option value="danns-river">Dunn's River Falls Tour</option>
                         <option value="blue-mountain">Blue Mountain Peak Hike</option>
                         <option value="seven-mile">Seven Mile Beach Relaxation</option>
-                        <!-- ADDED MARTHA BRAE OPTION HERE -->
                         <option value="martha-brae">Martha Brae River Rafting</option>
                     </select>
                 </div>
@@ -55,19 +54,19 @@
                 <button type="submit" class="btn-dark">Complete Reservation</button>
             </form>
             
-            <!-- Dynamic Success Alert Container -->
+            <!-- Hidden verification notice container -->
             <div id="success-alert" class="alert-success hidden" role="alert">
                 🎉 Your reservation request was submitted successfully!
             </div>
         </div>
     </main>
 
-    <!-- FOOTER STRUCTURE -->
+    <!-- FOOTER PANEL -->
     <footer class="text-center">
         <p style="margin: 0;">&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
     </footer>
 
-    <!-- Core Javascript Code -->
+    <!-- Main core execution script -->
     <script src="js/app.js"></script>
 </body>
 </html>

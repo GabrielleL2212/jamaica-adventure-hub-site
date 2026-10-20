@@ -1,5 +1,5 @@
 // ========================================================
-// 1. DATA RESOURCE ARRAY (Added image links here)
+// 1. DATA ARRAY (List of our adventures with image links)
 // ========================================================
 var adventures = [
     {
@@ -29,15 +29,17 @@ var adventures = [
 ];
 
 // ========================================================
-// 2. WAIT FOR WEBSITE TO RUN OFFLINE
+// 2. RUN ON WINDOW LOAD
 // ========================================================
 window.onload = function() {
+    // Check if we are on the Explore page
     var container = document.getElementById("adventure-container");
     if (container) {
         showCards("all");
         setupButtons();
     }
 
+    // Check if we are on the Booking page
     var form = document.getElementById("booking-form");
     if (form) {
         setupValidation();
@@ -45,19 +47,19 @@ window.onload = function() {
 };
 
 // ========================================================
-// 3. GENERATE BLOCKS WITH SIMPLE STRINGS
+// 3. LOOP TO GENERATE ADVENTURE CARDS
 // ========================================================
 function showCards(chosenCategory) {
     var container = document.getElementById("adventure-container");
-    container.innerHTML = ""; 
+    container.innerHTML = ""; // Clear out placeholder text
 
     for (var i = 0; i < adventures.length; i++) {
         var currentItem = adventures[i];
 
+        // Only display if the category matches or if 'all' is selected
         if (chosenCategory === "all" || currentItem.category === chosenCategory) {
             var cardHTML = 
                 '<div class="card-custom">' +
-                    // 🌟 EXPELLED PLACEHOLDER AND INSURTED REAL IMAGE TAG HERE:
                     '<img src="' + currentItem.image + '" alt="adventure">' +
                     '<div class="card-content-box">' +
                         '<div>' +
@@ -74,18 +76,21 @@ function showCards(chosenCategory) {
 }
 
 // ========================================================
-// 4. MOUSE EVENT HANDLERS
+// 4. BUTTON CLICK EVENTS FOR FILTERING
 // ========================================================
 function setupButtons() {
     var buttons = document.getElementsByClassName("btn-custom");
 
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].onclick = function() {
+            // Remove active style from all filter buttons
             for (var j = 0; j < buttons.length; j++) {
                 buttons[j].classList.remove("active");
             }
+            // Add active class to the button we just clicked
             this.classList.add("active");
 
+            // Filter the cards based on the button's data category
             var categoryToFilter = this.getAttribute("data-category");
             showCards(categoryToFilter);
         };
@@ -93,25 +98,25 @@ function setupButtons() {
 }
 
 // ========================================================
-// 5. REGISTRATION VERIFICATION INTERACTION
+// 5. BOOKING FORM CHECK AND SUBMIT
 // ========================================================
 function setupValidation() {
     var form = document.getElementById("booking-form");
     var alertBox = document.getElementById("success-alert");
 
     form.onsubmit = function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent standard page refresh
 
         var nameInput = document.getElementById("fullName").value;
         var emailInput = document.getElementById("email").value;
         var selectField = document.getElementById("adventureSelect").value;
 
-        // Simple form validation logic checking for empty constraints
+        // Basic check to confirm inputs are not left empty
         if (nameInput === "" || emailInput === "" || selectField === "") {
             alert("Please fill out all empty required registration form items before completing booking.");
         } else {
-            form.classList.add("hidden");
-            alertBox.classList.remove("hidden");
+            form.classList.add("hidden"); // Hide the input elements
+            alertBox.classList.remove("hidden"); // Display success banner
         }
     };
 }

@@ -1,5 +1,5 @@
 /* ========================================================
-   CLEAN LAYOUT RULES (MODERN VIBRANT LUXURY EDITION)
+   MAIN STYLESHEET FOR WEBSITE LAYOUT
    ======================================================== */
 body {
     background-color: #f3f4f6;
@@ -9,9 +9,9 @@ body {
     color: #2d3748;
 }
 
-/* 1. PREMIUM HEADER BANNER */
+/* 1. TOP NAVIGATION MENU */
 .navbar {
-    background-color: #0b0f19; /* Deep Rich Obsidian */
+    background-color: #0b0f19; 
     padding: 25px 20px;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ body {
     margin-bottom: 15px;
     display: inline-block;
     text-transform: uppercase;
-    border-bottom: 3px solid #FED100; /* Jamaica Gold Line */
+    border-bottom: 3px solid #FED100; /* Jamaica Gold line styling */
 }
 .nav-links {
     display: flex;
@@ -47,11 +47,11 @@ body {
     border-radius: 4px;
 }
 .nav-link.active, .nav-link:hover {
-    color: #009B3A !important; /* Jamaica Green Glow */
+    color: #009B3A !important; /* Changes text to Jamaica Green on focus or hover */
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* 2. BASE CONTAINER STRUCTURE */
+/* 2. BASE CONTAINER MIXES */
 .container {
     max-width: 1140px;
     margin: 50px auto;
@@ -65,10 +65,10 @@ body {
     color: #718096;
 }
 
-/* 3. SHARP GEOMETRIC MODERN HERO BOX */
+/* 3. HOME PAGE HERO WELCOME BANNER */
 .hero-box {
     background: linear-gradient(135deg, #009B3A 0%, #007A2D 50%, #FED100 100%);
-    color: #fff; /* Crisp white text for ultimate contrast */
+    color: #fff; 
     padding: 70px 40px;
     border-radius: 16px;
     margin-bottom: 40px;
@@ -76,7 +76,7 @@ body {
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* 4. RESPONSIVE CENTERED CARDS ROW GRID */
+/* 4. LAYOUT RESPONSIVE FLEX GRID FOR CARDS */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -92,7 +92,7 @@ body {
     max-width: 360px; 
 }
 
-/* 5. LUXURY CARDS Presentation Rules */
+/* 5. EXPLORE EXCURSION CARD PRESENTATION RULES */
 .card-custom {
     background: #fff;
     border: none;
@@ -102,10 +102,10 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s ease;
 }
 .card-custom:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px); /* Raises box up slightly when hovered */
     box-shadow: 0 20px 35px rgba(0,0,0,0.1);
 }
 .card-custom img {
@@ -144,7 +144,7 @@ body {
     align-self: flex-start;
 }
 
-/* 6. IMMERSIVE CONTENT CARD */
+/* 6. BOOKING REGISTRATION FORM STYLING */
 .form-card {
     background: #fff;
     border: none;
@@ -182,12 +182,12 @@ body {
 }
 .form-control:focus, .form-select:focus {
     outline: none;
-    border-color: #009B3A;
+    border-color: #009B3A; /* Colors borders green when clicking text box input */
     background-color: #fff;
     box-shadow: 0 0 0 3px rgba(0, 155, 58, 0.1);
 }
 
-/* BUTTON ENGINE */
+/* 7. ACTION BUTTON VARIANTS */
 .btn-lg {
     background-color: #009B3A;
     color: #fff !important;
@@ -205,9 +205,7 @@ body {
 .btn-lg:hover {
     background-color: #007A2D;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 155, 58, 0.3);
 }
-
 .btn-dark {
     background-color: #0b0f19;
     color: #FED100;
@@ -227,7 +225,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* 7. SYSTEM STATUSES */
+/* 8. ALERTS AND FOOTER SYSTEM ELEMENTS */
 .alert-success {
     background-color: #c6f6d5;
     color: #22543d;
