@@ -1,26 +1,30 @@
 // ========================================================
-// 1. DATA RESOURCE ARRAY
+// 1. DATA RESOURCE ARRAY (Added image links here)
 // ========================================================
 var adventures = [
     {
         title: "Dunn's River Falls Tour",
         category: "Water",
-        description: "Climb the world-famous 600-foot cascading limestone terraces near Ocho Rios."
+        description: "Climb the world-famous 600-foot cascading limestone terraces near Ocho Rios.",
+        image: "https://plus.unsplash.com/premium_photo-1694475416817-825622d87f19?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
     },
     {
         title: "Blue Mountain Peak Hike",
         category: "Mountain",
-        description: "Trek up Jamaica's highest summit to view a breathtaking Caribbean sunrise."
+        description: "Trek up Jamaica's highest summit to view a breathtaking Caribbean sunrise.",
+        image: "https://images.unsplash.com/photo-1557129603-ff35a0c70e5e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
     },
     {
         title: "Seven Mile Beach Relaxation",
         category: "Beach",
-        description: "Bask along miles of pure, unbroken white sand and pristine turquoise waves."
+        description: "Bask along miles of pure, unbroken white sand and pristine turquoise waves.",
+        image: "https://plus.unsplash.com/premium_photo-1681223447383-402912b83029?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
     },
     {
         title: "Martha Brae River Rafting",
         category: "Water",
-        description: "Glide peacefully on a 30-foot handmade bamboo raft steered by a local guide."
+        description: "Glide peacefully on a 30-foot handmade bamboo raft steered by a local guide.",
+        image: "https://images.unsplash.com/photo-1668115118877-ca2946340036?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
     }
 ];
 
@@ -53,7 +57,8 @@ function showCards(chosenCategory) {
         if (chosenCategory === "all" || currentItem.category === chosenCategory) {
             var cardHTML = 
                 '<div class="card-custom">' +
-                    '<div class="card-image-placeholder">🇯🇲 Excursion Focus</div>' +
+                    // 🌟 EXPELLED PLACEHOLDER AND INSURTED REAL IMAGE TAG HERE:
+                    '<img src="' + currentItem.image + '" alt="adventure">' +
                     '<div class="card-content-box">' +
                         '<div>' +
                             '<h3 class="card-title-text">' + currentItem.title + '</h3>' +

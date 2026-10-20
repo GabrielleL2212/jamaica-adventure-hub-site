@@ -4,36 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamaica Adventure Hub | Home</title>
+    <!-- Official Bootstrap 5 Framework Layout Link Added Successfully -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Custom theme rules sheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <nav class="navbar-custom">
-        <a class="navbar-brand-custom" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
-        <div class="nav-links-custom">
-            <a href="index.html" class="active">Home</a>
-            <a href="explore.html">Explore Adventures</a>
-            <a href="booking.html">Book a Tour</a>
+    <!-- BOOTSTRAP NAVIGATION INTERFACE -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
+            <div class="ms-auto">
+                <div class="navbar-nav flex-row">
+                    <a class="nav-link mx-2 active" href="index.html">Home</a>
+                    <a class="nav-link mx-2" href="explore.html">Explore Adventures</a>
+                    <a class="nav-link mx-2" href="booking.html">Book a Tour</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <main class="main-container text-center">
-        <div class="hero-box">
-            <h1 style="font-size: 42px; margin: 0 0 10px 0;">Welcome to the Heart of the Caribbean</h1>
-            <p style="font-size: 18px; margin: 0;">Discover breathtaking waterfalls, majestic mountain peaks, and pristine beaches.</p>
+    <!-- MAIN LANDING PAGE CONTAINER -->
+    <main class="container my-5 text-center">
+        <!-- HERO SECTION STYLED WITH BOOTSTRAP UTILITIES AND THEME OVERRIDES -->
+        <div class="p-5 mb-4 rounded-3 hero-box shadow-sm text-dark">
+            <h1 class="display-4 fw-bold mb-3">Welcome to the Heart of the Caribbean</h1>
+            <p class="fs-5">Discover breathtaking waterfalls, majestic mountain peaks, and pristine beaches.</p>
         </div>
 
-        <section style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e1e4e8; box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
-            <h2>Your Next Adventure Starts Here</h2>
-            <p style="color: #666; margin-bottom: 25px;">We are currently building an unforgettable experience guide.</p>
-            <a href="explore.html" class="btn-custom" style="text-decoration: none; display: inline-block;">Explore Activities</a>
+        <!-- MAIN CALL TO ACTION BLOCK -->
+        <section class="p-5 bg-white rounded-3 border shadow-sm">
+            <h2 class="fw-bold">Your Next Adventure Starts Here</h2>
+            <p class="text-muted mb-4">We are currently building an unforgettable experience guide.</p>
+            <a href="explore.html" class="btn btn-outline-success btn-lg px-4 fw-bold">Explore Activities</a>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
+    <!-- FOOTER STRUCTURE -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
+        </div>
     </footer>
 
+    <!-- Core Javascript Code -->
     <script src="js/app.js"></script>
 </body>
 </html>
