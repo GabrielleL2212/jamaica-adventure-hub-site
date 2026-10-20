@@ -4,48 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamaica Adventure Hub | Home</title>
-    <!-- Official Bootstrap 5 Framework Layout Link Added Successfully -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Custom theme rules sheet -->
+    <!-- Linking directly to your custom layout rules sheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- BOOTSTRAP NAVIGATION INTERFACE -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- CUSTOM THEMED NAVIGATION BAR -->
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
-            <div class="ms-auto">
-                <div class="navbar-nav flex-row">
-                    <a class="nav-link mx-2 active" href="index.html">Home</a>
-                    <a class="nav-link mx-2" href="explore.html">Explore Adventures</a>
-                    <a class="nav-link mx-2" href="booking.html">Book a Tour</a>
-                </div>
+            <a class="navbar-brand" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
+            <div class="nav-links">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="explore.html">Explore Adventures</a>
+                <a class="nav-link" href="booking.html">Book a Tour</a>
             </div>
         </div>
     </nav>
 
     <!-- MAIN LANDING PAGE CONTAINER -->
-    <main class="container my-5 text-center">
-        <!-- HERO SECTION STYLED WITH BOOTSTRAP UTILITIES AND THEME OVERRIDES -->
-        <div class="p-5 mb-4 rounded-3 hero-box shadow-sm text-dark">
-            <h1 class="display-4 fw-bold mb-3">Welcome to the Heart of the Caribbean</h1>
-            <p class="fs-5">Discover breathtaking waterfalls, majestic mountain peaks, and pristine beaches.</p>
+    <main class="container text-center">
+        
+        <!-- HERO BANNER STYLED WITH YOUR GREEN & GOLD GRADIENT -->
+        <div class="hero-box">
+            <h1 style="font-size: 36px; margin: 0 0 10px 0; font-weight: bold;">Welcome to the Heart of the Caribbean</h1>
+            <p style="font-size: 18px; margin: 0;">Discover breathtaking waterfalls, majestic mountain peaks, and pristine beaches.</p>
         </div>
 
-        <!-- MAIN CALL TO ACTION BLOCK -->
-        <section class="p-5 bg-white rounded-3 border shadow-sm">
-            <h2 class="fw-bold">Your Next Adventure Starts Here</h2>
-            <p class="text-muted mb-4">We are currently building an unforgettable experience guide.</p>
-            <a href="explore.html" class="btn btn-outline-success btn-lg px-4 fw-bold">Explore Activities</a>
+        <!-- MAIN CALL TO ACTION CONTENT BOX -->
+        <section class="card" style="padding: 40px; text-align: center;">
+            <h2 style="font-weight: bold; margin-bottom: 10px;">Your Next Adventure Starts Here</h2>
+            <p class="text-muted" style="margin-bottom: 25px;">We are currently building an unforgettable experience guide.</p>
+            <a href="explore.html" class="btn btn-lg" style="text-decoration: none; display: inline-block;">Explore Activities</a>
         </section>
+        
     </main>
 
     <!-- FOOTER STRUCTURE -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
-        </div>
+    <footer class="text-center">
+        <p style="margin: 0;">&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
     </footer>
 
     <!-- Core Javascript Code -->
