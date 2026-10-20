@@ -1,61 +1,163 @@
 /* ========================================================
-   CUSTOM ELEMENT STYLING (BUILT TO ENHANCE BOOTSTRAP 5)
+   BEGINNER STUDENT LAYOUT RULES (NO INTERNET REQUIRED)
    ======================================================== */
-:root {
-    --ja-gold: #FED100;
-    --ja-green: #009B3A;
-    --ja-black: #1a1a1a;
-}
-
 body {
     background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-/* Custom Navigation Decoration */
+/* 1. SIMPLE NAVIGATION BAR */
+.navbar, nav {
+    background-color: #212529;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a, nav a {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 8px 12px;
+}
 .navbar-brand {
-    border-bottom: 3px solid var(--ja-gold);
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #FED100; /* Subtle Gold Accent Line */
 }
-
-/* Bootstrap Button overrides to use our Jamaican Green theme */
-.btn-outline-success {
-    color: var(--ja-green) !important;
-    border-color: var(--ja-green) !important;
-}
-
-.btn-outline-success.active, .btn-outline-success:hover {
-    background-color: var(--ja-green) !important;
+.nav-link.active {
+    font-weight: bold;
     color: #fff !important;
-    border-color: var(--ja-green) !important;
 }
 
-/* Card Presentation & Image Sizing Enhancements */
-.card-custom {
-    border: none !important;
-    border-radius: 12px !important;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* 2. BASE CONTENT CONTAINERS */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.text-center {
+    text-align: center;
+}
+.text-muted {
+    color: #6c757d;
 }
 
-.card-custom:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
-}
-
-.card-custom img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-/* Home Hero Graphic Box Accent */
+/* 3. JAMAICAN COLORS HERO BANNER (Home Page Box) */
 .hero-box {
-    background: linear-gradient(135deg, var(--ja-green), var(--ja-gold)) !important;
-    color: #1a1a1a !important;
+    background: linear-gradient(135deg, #009B3A, #FED100); /* Simple Green & Gold Gradient */
+    color: #212529;
+    padding: 45px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
 }
 
-/* Utility rules to toggle components dynamically */
-.hidden {
+/* 4. EXCURSION FILTER BUTTONS */
+.btn {
+    background-color: #fff;
+    color: #009B3A;
+    border: 2px solid #009B3A;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+}
+.btn.active, .btn:hover {
+    background-color: #009B3A;
+    color: #fff;
+}
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 5. RESPONSIVE CARDS GRID CONTAINER */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.col-md-6, .col-lg-4, [class*="col-"] {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Grid sorting calculation rules for wider laptops/screens */
+@media (min-width: 768px) {
+    .col-md-6 { width: 50%; }
+}
+@media (min-width: 992px) {
+    .col-lg-4 { width: 33.33%; }
+}
+
+/* 6. CLEAN CARD STYLING RULES */
+.card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.badge {
+    background-color: #212529;
+    color: #FED100;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+/* 7. BASIC BOOKING FORM FIELDS */
+.form-control, .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.btn-dark {
+    background-color: #212529;
+    color: #FED100;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* 8. INTERACTIVE SYSTEM MESSAGES */
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+}
+.hidden, .d-none {
     display: none !important;
 }
