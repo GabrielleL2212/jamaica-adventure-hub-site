@@ -1,5 +1,5 @@
 /* ========================================================
-   CLEAN LAYOUT RULES (FIXES ALIGNMENT & NAVIGATION MENUS)
+   CLEAN LAYOUT RULES (FIXES ALIGNMENT & CENTERING BOXES)
    ======================================================== */
 body {
     background-color: #f8f9fa;
@@ -9,7 +9,7 @@ body {
     color: #333;
 }
 
-/* 1. WIDE, PROPORTIONAL NAVIGATION HEADER */
+/* 1. BALANCED NAVIGATION HEADER BANNER */
 .navbar {
     background-color: #212529;
     padding: 20px;
@@ -25,12 +25,12 @@ body {
     text-decoration: none;
     margin-bottom: 12px;
     display: inline-block;
-    border-bottom: 3px solid #FED100; /* Jamaican Gold Underline */
+    border-bottom: 3px solid #FED100; /* Underline Line */
 }
 .nav-links {
     display: flex;
     justify-content: center;
-    gap: 25px; /* Spreads navigation text elements apart cleanly */
+    gap: 25px; 
     padding: 0;
     margin: 0;
 }
@@ -42,10 +42,10 @@ body {
 }
 .nav-link.active, .nav-link:hover {
     font-weight: bold;
-    color: #FED100 !important; /* Highlights active location in gold */
+    color: #FED100 !important;
 }
 
-/* 2. BASE CONTENT CONTAINERS & ALIGNMENTS */
+/* 2. BASE CONTAINER STRUCTURE */
 .container {
     max-width: 1100px;
     margin: 40px auto;
@@ -68,50 +68,24 @@ body {
     margin-bottom: 30px;
 }
 
-/* 4. EXCURSION FILTER BUTTON ALIGNMENTS */
-.button-group {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 35px;
-}
-.btn {
-    background-color: #fff;
-    color: #009B3A;
-    border: 2px solid #009B3A;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: all 0.2s;
-}
-.btn.active, .btn:hover {
-    background-color: #009B3A;
-    color: #fff;
-}
-.btn-lg {
-    padding: 14px 28px;
-    font-size: 16px;
-}
-
-/* 5. RESPONSIVE CENTERED CONTENT GRID */
+/* 4. RESPONSIVE CENTERED CONTENT GRID ROW */
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers layout cards horizontally */
+    justify-content: center; /* Centers layout elements horizontally */
+    align-items: center;
     margin: 0 -15px;
+    width: 100%;
 }
 .col-card {
     padding: 15px;
     box-sizing: border-box;
     width: 100%;
-    max-width: 380px; /* Restricts cards from expanding too wide */
+    max-width: 350px; 
 }
 
-/* 6. CLEAN CARD BOX PRESENTATION STYLES */
-.card {
+/* 5. CARD BOX Presentation Rules */
+.card-custom {
     background: #fff;
     border: 1px solid #dee2e6;
     border-radius: 12px;
@@ -119,18 +93,20 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    text-align: left; /* Keeps inside text readable while box stays centered */
+    text-align: left;
+    height: 100%;
 }
-.card img {
+.card-custom img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-.card-body {
+.card-content-box {
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
 }
 .card-title-text {
     font-size: 18px;
@@ -143,7 +119,7 @@ body {
     line-height: 1.5;
     margin: 0 0 15px 0;
 }
-.badge {
+.badge-custom {
     background-color: #212529;
     color: #FED100;
     padding: 5px 10px;
@@ -154,16 +130,18 @@ body {
     align-self: flex-start;
 }
 
-/* 7. BASIC BOOKING FORM FIELDS */
+/* 6. PROPERLY CENTERED BOOKING FORM CARD */
 .form-card {
     background: #fff;
     border: 1px solid #dee2e6;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 100%;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto !important; /* Forces the box straight into the center line */
     padding: 30px;
     border-radius: 12px;
-    text-align: left;
+    text-align: left; /* Keeps text label boxes clean */
+    box-sizing: border-box;
 }
 .form-group {
     margin-bottom: 20px;
@@ -196,7 +174,7 @@ body {
     background-color: #333;
 }
 
-/* 8. INTERACTIVE MESSAGES */
+/* 7. INTERACTIVE SYSTEM BANNER MESSAGES */
 .alert-success {
     background-color: #d1e7dd;
     color: #0f5132;
