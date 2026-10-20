@@ -84,7 +84,7 @@ body {
     max-width: 350px; 
 }
 
-/* 6. CLEAN CARD BOX PRESENTATION STYLES (NOW WITH EQUAL HEIGHTS!) */
+/* 5. CARD BOX Presentation Rules */
 .card-custom {
     background: #fff;
     border: 1px solid #dee2e6;
@@ -94,8 +94,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    height: 100%; /* Makes sure the box fills the column height */
-    box-sizing: border-box;
+    height: 100%;
 }
 .card-custom img {
     width: 100%;
@@ -106,8 +105,8 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes the badge directly to the bottom */
-    flex-grow: 1; /* Forces the content area to stretch equally */
+    justify-content: space-between;
+    flex-grow: 1;
 }
 .card-title-text {
     font-size: 18px;
@@ -129,7 +128,6 @@ body {
     border-radius: 4px;
     text-transform: uppercase;
     align-self: flex-start;
-    margin-top: auto; /* Locks the badge neatly at the bottom edge */
 }
 
 /* 6. PROPERLY CENTERED BOOKING FORM CARD */
