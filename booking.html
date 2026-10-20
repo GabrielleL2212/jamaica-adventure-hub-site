@@ -4,75 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamaica Adventure Hub | Book a Tour</title>
-    <!-- Official Bootstrap 5 Framework Layout Link Added Successfully -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Custom theme rules sheet -->
+    <!-- Linking directly to your custom layout rules sheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- BOOTSTRAP NAVIGATION INTERFACE -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- CUSTOM THEMED NAVIGATION BAR -->
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
-            <div class="ms-auto">
-                <div class="navbar-nav flex-row">
-                    <a class="nav-link mx-2" href="index.html">Home</a>
-                    <a class="nav-link mx-2" href="explore.html">Explore Adventures</a>
-                    <a class="nav-link mx-2 active" href="booking.html">Book a Tour</a>
-                </div>
+            <a class="navbar-brand" href="index.html">🇯🇲 Jamaica Adventure Hub</a>
+            <div class="nav-links">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="explore.html">Explore Adventures</a>
+                <a class="nav-link active" href="booking.html">Book a Tour</a>
             </div>
         </div>
     </nav>
 
     <!-- FORM INTERACTION CONTAINER -->
-    <main class="container my-5">
-        <header class="text-center mb-5">
-            <h1 class="display-5 fw-bold">Secure Your Excursion</h1>
+    <main class="container text-center">
+        <header style="margin-bottom: 30px;">
+            <h1 style="font-size: 36px; margin-bottom: 10px; font-weight: bold;">Secure Your Excursion</h1>
             <p class="text-muted">Fill out the registration details below to reserve your spot.</p>
         </header>
 
-        <!-- FORM STRUCTURE STYLED WITH BOOTSTRAP UTILITIES -->
-        <div class="card shadow-sm p-4 mx-auto bg-white" style="max-width: 550px; border-radius: 12px;">
-            <form id="booking-form" class="needs-validation" novalidate>
-                <div class="mb-3 text-start">
-                    <label for="fullName" class="form-label fw-bold">Full Name</label>
-                    <input type="text" class="form-control" id="fullName" placeholder="Enter first and last name" required>
-                    <div class="invalid-feedback">Full name is required.</div>
+        <!-- FORM CARD BOX STRUCTURE -->
+        <div class="card mx-auto bg-white" style="max-width: 550px; padding: 30px; text-align: left;">
+            <form id="booking-form">
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="fullName" style="font-weight: bold;">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter first and last name">
                 </div>
 
-                <div class="mb-3 text-start">
-                    <label for="email" class="form-label fw-bold">Email Address</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="font-weight: bold;">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
                 </div>
 
-                <div class="mb-4 text-start">
-                    <label for="adventureSelect" class="form-label fw-bold">Select Your Adventure</label>
-                    <select class="form-select" id="adventureSelect" required>
+                <div style="margin-bottom: 25px;">
+                    <label for="adventureSelect" style="font-weight: bold;">Select Your Adventure</label>
+                    <select class="form-select" id="adventureSelect">
                         <option value="">-- Choose an Option --</option>
                         <option value="danns-river">Dunn's River Falls Tour</option>
                         <option value="blue-mountain">Blue Mountain Peak Hike</option>
                         <option value="seven-mile">Seven Mile Beach Relaxation</option>
                     </select>
-                    <div class="invalid-feedback">Please select an adventure option.</div>
                 </div>
 
-                <button type="submit" class="btn btn-dark w-100 py-2.5 fw-bold" style="color: #FED100;">Complete Reservation</button>
+                <button type="submit" class="btn-dark">Complete Reservation</button>
             </form>
             
             <!-- Dynamic Success Alert Container -->
-            <div id="success-alert" class="alert alert-success mt-4 d-none" role="alert">
+            <div id="success-alert" class="alert-success hidden" role="alert">
                 🎉 Your reservation request was submitted successfully!
             </div>
         </div>
     </main>
 
     <!-- FOOTER STRUCTURE -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
-        </div>
+    <footer class="text-center">
+        <p style="margin: 0;">&copy; 2026 Jamaica Adventure Hub. All Rights Reserved.</p>
     </footer>
 
     <!-- Core Javascript Code -->
