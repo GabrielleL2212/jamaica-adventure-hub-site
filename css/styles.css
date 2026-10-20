@@ -1,5 +1,5 @@
 /* ========================================================
-   CLEAN LAYOUT RULES (FIXES ALIGNMENT & CENTERING BOXES)
+   CLEAN LAYOUT RULES (STABLE VERSION WITH CENTERED BOXES)
    ======================================================== */
 body {
     background-color: #f8f9fa;
@@ -94,7 +94,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    height: 100%;
 }
 .card-custom img {
     width: 100%;
@@ -106,7 +105,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
 }
 .card-title-text {
     font-size: 18px;
